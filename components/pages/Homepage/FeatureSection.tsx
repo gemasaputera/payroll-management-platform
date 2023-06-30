@@ -45,8 +45,8 @@ const FeatureSection = () => {
           </p>
         </div>
 
-        <div className="flex gap-12">
-          <div className="w-[300px]">
+        <div className="flex flex-col lg:flex-row gap-12">
+          <div className="flex lg:inline lg:w-[300px]">
             {features.map((feature, index) => {
               return (
                 <CardFeature
