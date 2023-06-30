@@ -7,9 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      boxShadow: {
-        dreambill: '0px 4px 16px 0px rgba(8, 92, 96, 0.14)'
-      },
       colors: {
         dreambill: '#085C60'
       }

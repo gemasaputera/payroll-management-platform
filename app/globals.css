@@ -7,3 +7,7 @@ body {
   margin: 0 auto;
   max-width: 1200px;
 }
+
+.shadow-dreambill {
+  box-shadow: 0px 4px 16px 0px rgba(8, 92, 96, 0.25);
+}
