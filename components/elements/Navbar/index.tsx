@@ -24,7 +24,7 @@ const menus = [
 
 const Navbar = () => {
   return (
-    <div className="rounded-[43px] bg-white py-4 px-[45px] flex items-center justify-between sticky top-8 shadow-dreambill">
+    <div className="rounded-[43px] bg-white py-4 px-[45px] flex items-center justify-between sticky top-8 shadow-dreambill mx-auto max-w-7xl">
       <div>
         <Image
           src="/logo.svg"

@@ -5,14 +5,14 @@ import React from 'react';
 const HeroSection = () => {
   return (
     <div
-      className="pt-8 flex bg-auto bg-no-repeat bg-center"
+      className="pt-8 flex bg-auto bg-no-repeat bg-center max-w-7xl mx-auto"
       style={{ backgroundImage: `url('/grid.png')` }}
     >
       <div className="flex-1 flex items-start justify-center flex-col">
         <h1 className="text-[64px] text-dreambill font-bold leading-[76px] mb-6">
           Empower Your Workforce, Unlock Africa`s Potential
         </h1>
-        <h5 className="text-[20px] leading-[26px] font-normal">
+        <h5 className="text-[20px] leading-[26px] font-normal text-[#556F71]">
           Empower your business with our comprehensive payroll platform tailored
           for the African market. Streamline your Payroll Processes, Ensure
           Compliance, and Focus on Growth
