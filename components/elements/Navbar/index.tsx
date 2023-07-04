@@ -3,6 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from 'antd';
 import { HiBars3, HiXCircle } from 'react-icons/hi2';
+import { FiInstagram, FiFacebook } from 'react-icons/fi';
+import { Nunito_Sans } from 'next/font/google';
+
+const nunito = Nunito_Sans({
+  subsets: ['latin']
+});
 
 const menus = [
   {
@@ -36,9 +42,17 @@ const Navbar = () => {
   return (
     <>
       {openMenu ? (
-        <div className="w-screen h-screen z-20 bg-white fixed -mt-8">
-          <div className="w-full flex justify-end p-8">
+        <div className="w-screen h-screen z-20 flex flex-col bg-white fixed -mt-8">
+          <div className="w-full flex justify-between items-center p-3">
             <div>
+              <Image
+                src="/logo.svg"
+                width={154}
+                height={33}
+                alt="Picture of the author"
+              />
+            </div>
+            <div className="flex justify-end">
               <Button
                 type="text"
                 size="large"
@@ -49,42 +63,50 @@ const Navbar = () => {
               </Button>
             </div>
           </div>
-          <div className="p-6 mx-auto">
-            <ul className="gap-4 flex flex-col items-center">
-              {menus.map((menu: any, index: number) => {
-                return (
-                  <li key={index}>
-                    <Link href={menu.url}>
-                      {' '}
-                      <span className="font-semibold text-base text-dreambill hover:text-dreambill/80">
+          <div className="mx-3 h-full flex-1 flex flex-col justify-between pb-3 pt-6">
+            <div className="gap-8 flex flex-col flex-1">
+              <ul className="gap-8 flex justify-center flex-col ">
+                {menus.map((menu: any, index: number) => {
+                  return (
+                    <li key={index}>
+                      <Link href={menu.url}>
                         {' '}
-                        {menu.title}
-                      </span>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-            <div className="flex flex-col items-center gap-3 mt-2">
+                        <span
+                          style={nunito.style}
+                          className="font-semibold text-2xl text-dreambill hover:text-dreambill/80"
+                        >
+                          {' '}
+                          {menu.title}
+                        </span>
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
               <Button
-                className="!text-dreambill !font-semibold"
-                type="text"
+                className="!text-dreambill !font-semibold w-full border border-dreambill"
+                type="dashed"
                 size="large"
               >
                 Sign In
               </Button>
               <Button
-                className="bg-dreambill hover:!bg-dreambill/75"
+                className="bg-dreambill hover:!bg-dreambill/75 w-full"
                 size="large"
                 type="primary"
               >
                 Get Started
               </Button>
             </div>
+            <div className="flex gap-4">
+              <p className="font-normal text-lg">Follow us: </p>
+              <FiInstagram className="w-5 h-5 text-dreambill" />
+              <FiFacebook className="w-5 h-5 text-dreambill" />
+            </div>
           </div>
         </div>
       ) : null}
-      <div className="rounded-[43px] bg-white py-4 px-[45px] flex items-center justify-between sticky top-8 shadow-dreambill mx-auto max-w-7xl z-10">
+      <div className="rounded-[43px] bg-white py-4 px-[45px] flex items-center justify-between sticky top-8 shadow-dreambill mx-3 lg:mx-auto max-w-7xl z-10">
         <div>
           <Image
             src="/logo.svg"
